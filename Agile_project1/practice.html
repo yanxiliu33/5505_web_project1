@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice Page</title>
+    <!-- 自适应屏幕大小 Adaptive screen size -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 大标题字体，Google形式 Font Format-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans">
+</head>
+<link rel="stylesheet" href="practice.css">
+
+
+<body>
+    <!-- 渐变条色块Head gradient color block and smile image -->
+    <div id="colour-block">
+        <img src="image/smile2.jpg" alt="Smile" id="smiley-img">
+    </div>
+
+    <!-- 简单介绍页面 Simple introduction of the page -->
+    <h1 id="title">Practice Page</h1>
+    <div class="introduction">The role of a Practice Page is to provide users with guidelines and examples on best
+        practices in web development or design. These practices help improve the quality, performance, accessibility,
+        and user experience of the website.The main categories include: HTML、CSS、JavaScript, etc.
+    </div>
+
+    <!-- Add five options for each category-->
+    <!-- HTML-->
+    <h4 class="class">HTML Best Practices<span style="color: red;">*</span></h4>
+    <div class="description">Using HTML best practices makes websites better for everyone. It helps users access
+        information easily and improves search engine rankings. Good code is easier to read and fix. Clear labels and
+        structure make it simple for users to navigate. Faster loading times keep users happy. Overall, these practices
+        create a better experience and support long-term growth.
+    </div>
+
+    <div class="option" data-value="Use semantic tags">
+        <div class="label-circle">A</div>Use semantic tags
+    </div>
+    <div class="option" data-value="Use appropriate title hierarchy">
+        <div class="label-circle">B</div>Use appropriate title hierarchy
+    </div>
+    <div class="option" data-value="Use form labels">
+        <div class="label-circle">C</div>Use form labels
+    </div>
+    <div class="option" data-value="Ensure document validity">
+        <div class="label-circle">D</div>Ensure document validity
+    </div>
+    <div class="option" data-value="Provide text replacement">
+        <div class="label-circle">E</div>Provide text replacement
+    </div>
+
+    <!-- CSS-->
+    <h4 class="class">CSS Best Practices<span style="color: red;">*</span></h4>
+    <div class="description">CSS best practices help create clean and efficient styles for websites. They make code
+        easier to read and maintain. Using consistent naming makes it simple to understand. Organizing styles in a clear
+        way helps avoid confusion. These practices improve website performance and user experience.
+    </div>
+
+    <div class="option" data-value="Use external style sheets">
+        <div class="label-circle">A</div>Use external style sheets
+    </div>
+    <div class="option" data-value="Use Flexbox or Grid layout">
+        <div class="label-circle">B</div>Use Flexbox or Grid layout
+    </div>
+    <div class="option" data-value="Avoid using! important">
+        <div class="label-circle">C</div>Avoid using! important
+    </div>
+    <div class="option" data-value="Using CSS Variables">
+        <div class="label-circle">D</div>Using CSS Variables
+    </div>
+    <div class="option" data-value="Optimize selector">
+        <div class="label-circle">E</div>Optimize selector
+    </div>
+
+
+    <!--JavaScript-->
+    <h4 class="class">JavaScript Best Practices<span style="color: red;">*</span></h4>
+    <div class="description">JavaScript best practices help write clear and efficient code. They make debugging easier
+        and reduce errors. Using consistent naming and comments helps others understand the code. Organizing code in
+        functions keeps it clean. These practices improve performance and make the code more maintainable.
+    </div>
+
+    <div class="option" data-value="Using modular code">
+        <div class="label-circle">A</div>Using modular code
+    </div>
+    <div class="option" data-value="Avoid global variables">
+        <div class="label-circle">B</div>Avoid global variables
+    </div>
+    <div class="option" data-value="Using asynchronous programming">
+        <div class="label-circle">C</div>Using asynchronous programming
+    </div>
+    <div class="option" data-value="Add error handling">
+        <div class="label-circle">D</div>Add error handling
+    </div>
+    <div class="option" data-value="Avoid using inline event handling">
+        <div class="label-circle">E</div>Avoid using inline event handling
+    </div>
+
+    <!--Ssuccess criteria-->
+    <h4 class="class">Success Criteria<span style="color: red;">*</span></h4>
+    <div class="description">Based on the five options under the three categories mentioned above, each option is worth
+        one point, for a total of 15 points. The success standard for the best practice page is 12/15. Please click the
+        'Submit' button to view your score. If your score is greater than or equal to 12, congratulations on reaching
+        the standard. Let's enjoy some cute cat🐱 pictures together.
+    </div>
+
+    <!--Submit button-->
+    <button id="button" type="button" onclick="loadDoc()">Submit</button>
+
+    <!-- 模态框Modal box -->
+    <div class="modal" id="animalModal">
+        <div class="modal-content" id="modalContent">
+            <div id="animalImages"></div>
+            <button class="close-btn"
+                onclick="document.getElementById('animalModal').style.display='none'">Close</button>
+        </div>
+    </div>
+
+
+    <script src="practice.js"></script>
+</body>
+
+</html>

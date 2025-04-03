@@ -1,0 +1,356 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-items: center;
+
+}
+
+/* Heading */
+.title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+/* subtitle */
+.subtitle {
+    background-color: rgb(242, 250, 120) !important;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    align-items: flex-start;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+/* Set up the entire page*/
+.basic-container {
+    display: flex;/* ← 改变为左右布局 */
+    gap: 8px;/* ← 左右间距 */
+    align-items: stretch;
+    text-align: center;
+    padding: 20px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+/* Format the content on the left */
+.left-content {
+    background: rgb(135, 176, 233);
+    border-radius: 10px;
+    border-style: groove;
+    width: 250px;
+    margin-left: 18px;/*设置左侧列固定宽度Set the fixed width of the left column */
+}
+
+/* Photo */
+.photo img {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    width: 130px;/* 设置固定宽高，确保是正方形Set fixed width and height to ensure it is a square shape*/
+    height: auto;
+    display: block;
+    margin: 0 auto;    /* 居中图片Center picture*/
+    margin-top: 3px;
+}
+
+.photo:hover {
+    transform: scale(1.05);
+}
+
+/* Contact part */
+.contact {
+    width: 150px;
+    margin: auto;
+}
+
+.contact-title {
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8px;
+    margin-top: 35px;
+    background-color: rgb(242, 250, 120);
+}
+
+.contact-title:hover {
+    transform: scale(1.05);
+    font-size: 22px;
+    background-color: rgb(240, 238, 85);
+}
+
+/* Format of phone, address, and email titles*/
+.info-title {
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid #cccccc;
+    color: rgb(34, 30, 11);
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+.info-content {
+    font-size: 14px;
+    color: #110f0f;
+}
+
+/* 设置按钮样式Set button style */
+.email-link:link,
+email-link:visited {
+    display: block;
+    text-align: center;
+    color: white;
+    background: rgb(146, 125, 7);
+    text-decoration: none;    /* 去掉下划线 */
+    padding: 5px 5px;    /* 内边距，使按钮更大 */
+    border-radius: 6px;    /* 圆角 */
+    float: center; /* 按钮居中 */
+    margin-top: 1px;
+    transition: 0.3s;
+}
+
+.email-link:hover,
+email-link:active {
+    background-color: rgb(224, 193, 17);
+}
+
+/* 设置右边内容格式Format the content on the right */
+.basic-content {
+    flex: 1;/* 自动填充剩余空间Automatically fill remaining space */
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-style: groove;
+}
+
+.form-group {
+    display: flex;/* 让每组信息横向排列 */
+    justify-content: space-between;/* 在主轴上均匀分配空间 */
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 40px;
+    gap: 10px;/* 增加字段间距，避免过于紧凑 */
+}
+
+.form-group div {
+    width: 48%;/* 让每个字段占据一半宽度，保证两两一排Let each field occupy half of the width, ensuring two pairs and one row */    
+}
+
+/*标签要大写，字体粗体Labels should be capitalized with bold font*/
+label {
+    font-size: 20px;
+    font-weight: bold;
+    float: left;
+    margin-right: 80px;
+    margin-left: 20px;
+}
+
+/*信息要用框框起来Information should be framed*/
+input {
+    width: 100%;
+    max-width: 100%;    /*Limit maximum width*/
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px; /* The curvature of the input box */
+    margin-right: 80px;
+    margin-left: 20px;
+}
+
+/* 设置教育背景样式Set educational background style */
+.education-table {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 3px;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 让表格的行高更舒适 Make the row height of the table more comfortable*/
+.education-table th,
+.education-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+/* 鼠标悬停时，行高亮 When hovering over the mouse, highlight the row*/
+.education-table tr:hover {
+    background-color: #f1f1f1;
+    transition: 0.3s;
+}
+
+/* 成绩扇形图Score Fan Chart */
+#chartsContainer {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.chart {
+     /* 让每个字段占据一半宽度，保证两两一排Let each field occupy half of the width, ensuring two pairs and one row*/
+    width: 48%; 
+    height: 300px;
+}
+
+#toggleButton {
+    margin-right: auto;
+    display: block;
+}
+
+/* 技能和主要课程容器Skills and main course containers */
+.SkillContainer {
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* 主要技能雷达图Main Skill Radar Chart */
+#radarChart {
+    width: 300px;
+    height: 325px;
+    margin-left: 15px;
+}
+
+/* 软实力条形图 Soft Power Bar Chart*/
+#skillChart {
+    width: 480px;
+    height: 350px;
+}
+
+/* 学校经验 school and working experience */
+.eperience-item {
+    border-left: 3px solid #4A90E2;
+    padding-left: 20px;
+    margin-top: 10px;
+
+}
+
+.year-role {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+    margin-top: 16px;
+    margin-left: 20px;
+    margin-bottom: 8px;
+}
+
+.description {
+    font-size: 16px;
+    color: #444;
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 1px;
+}
+
+#button {
+    margin-right: auto;
+    display: block;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .title {
+        font-size: 20px;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .subtitle {
+        font-size: 16px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .basic-container {
+        flex-direction: column;/* 改为上下布局Change to top and bottom layout */
+        gap: 10px;/* 增加间距 Increase spacing*/
+        margin: 0 10px;
+    }
+
+    .left-content {
+        width: 100%;/* 左侧内容宽度占满屏幕The width of the left content occupies the entire screen */
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .photo img {
+        width: 100px;/* 缩小图片宽度Reduce the width of the image */
+        height: auto;
+    }
+
+    .contact {
+        width: 100%;  /* 联系信息宽度占满屏幕 The width of the contact information occupies the entire screen*/
+        margin: 0 auto;
+    }
+
+    .form-group {
+        flex-direction: column;/* 改为上下排列Change to top and bottom arrangement */
+        gap: 5px;
+        margin: 0 5px;
+    }
+
+    .form-group div {
+        width: 100%;/* 每个字段占满宽度 Each field occupies the full width*/
+    }
+
+    label {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    input {
+        padding: 8px;
+        font-size: 14px;
+        width: 90%;
+    }
+
+    .education-table {
+        font-size: 8px;
+    }
+
+    .SkillContainer {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #radarChart {
+        width: 100%;
+        height: auto;
+    }
+
+    #skillChart {
+        width: 100%;
+        height: auto;
+    }
+
+    .year-role {
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+    .description {
+        font-size: 14px;
+        margin: 0 10px;   
+    }
+
+}

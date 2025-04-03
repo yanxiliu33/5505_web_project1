@@ -1,0 +1,256 @@
+body {
+  width: 99%;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+ /* Page header color changing box */
+#colour-block {
+  height: 150px;   /* 横向拉满 */
+  position: relative;   /* 让图片可以定位在里面 */
+  background: linear-gradient(to right, #ff4fa2, #ffe5ae, #a1f4e0, #87b8ff);
+  /* 渐变色背景 */
+}
+
+/* smiley img */
+#smiley-img {
+  position: absolute;
+  left: 100px;
+  bottom: -80px;/* 向下悬浮部分 Downward suspended part*/
+  max-width: 100%;
+  height: auto;
+  width: 150px;/* 控制图片大小 Control image size */
+  height: 150px;
+  border-radius: 50%;
+  border: 6px solid #ccc;
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+ /* headline */
+#title {
+  font-size: 45px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 50px;
+  text-align: center;
+  align-items: center;
+  font-family: Merriweather, serif;
+}
+
+ /* Basic introduction to page */
+.introduction {
+  font-size: 20px;
+  color: #444;
+  align-items: center;
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 150px;
+  margin-right: 120px;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Title for each category */
+.class {
+  font-size: 22px;
+  color: #444;
+  text-align: left;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  margin-left: 100px;
+}
+
+/* Bssic explaination for each category */
+.description {
+  font-size: 20px;
+  color: #444;
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 80px;
+  margin-right: 100px;
+  font-family: "Open Sans", sans-serif;
+  font-style: italic; /* 字体倾斜 Font tilt */
+  
+}
+
+/* 5 options for each category */
+.option {
+  display: flex;
+  align-items: center;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  margin-left: 200px;
+  margin-right: 250px;
+  padding: 15px 15px;  /* 调小内边距让选项不那么高 Reduce the inner margin to make the options less high */
+  cursor: pointer; /* 将鼠标指针的样式更改为手形*/
+  transition: 0.2s; /* 状态变化时的过渡效果*/
+}
+
+/* Change color when hovering the mouse */
+.option:hover {
+  border-color: #999;
+}
+
+/* Click on the option to change color */
+.option.selected {
+  border-color: #555;
+  background-color: #f0f0f0;
+}
+
+/* Each option number */
+.label-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #ddd;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+}
+
+/* Submit button */
+#button {
+  margin-top: 20px;
+  margin-left: 100px;
+  padding: 20px 20px;
+  font-size: 14px;
+  background-color: #bfaaaabb;
+  color: rgb(23, 19, 19);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#button:hover {
+  background-color: #848282;
+}
+
+/* The simulation box that appears after clicking submit */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80%;
+  overflow-y: auto;
+  text-align: center;
+}
+
+/* Animal-img */
+.animal-img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 10px 0;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Close the simulation box */
+.close-btn {
+  background-color: #eee;
+  border: none;
+  padding: 6px 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* 手机端优化 Mobile optimization */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+    font-size: 14px;
+    /* 调整基础字体大小 */
+  }
+  #colour-block {
+    /* 横向拉满 */
+    height: 100px;
+  }
+  
+  #smiley-img {
+    left: 3%; /* 居中显示 */
+    bottom: -40px; /* 调整悬浮位置 */
+    width: 70px; /* 缩小图片宽度 */
+    height: 70px;/* 缩小图片高度 */
+    border: 4px solid #ccc; /* 调整边框大小 */
+   
+  }
+
+  #title {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-left: 20px;
+    text-align: center;
+  }
+
+  .class {
+    font-size: 20px;
+    margin-left: 5px;
+  }
+
+  .introduction,
+  .description {
+    font-size: 16px;
+    margin-left: 5px;
+    margin-right: 10px;
+    text-align: justify;
+  }
+
+  .option {
+    font-size: 12px;
+    padding: 8px 10px;/* 减小内边距 */
+    margin: 10px 0;/* 减小外边距 */
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .label-circle {
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+    margin-right: 6px;
+  }
+
+  #button {
+    margin: 10px 0;
+    padding: 12px 16px;/* 减小按钮内边距 */
+    font-size: 12px;
+    width: 100%;
+  }
+
+  .modal-content {
+    width: 90%;
+    padding: 10px;/* 减小模态框内边距 */
+  }
+
+  .animal-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;/* 调整圆角 */
+  }
+
+  .close-btn {
+    font-size: 12px;
+    padding: 4px 8px;
+
+  }
+}
